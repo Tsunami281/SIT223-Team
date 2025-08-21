@@ -1,1 +1,30 @@
+# 1) Clone & enter
+git clone https://github.com/<TL-username>/Deakin-Unit-Page.git
+cd Deakin-Unit-Page
+
+# 2) UI feature branch
+git checkout -b add-header
+# (Add logo.svg to project root, edit index.html + main.css)
+git add .
+git commit -m "add new header and logo"
+git push -u origin add-header
+
+# 3) Merge to main
+git checkout main
+git pull
+git merge add-header
+git push
+
+# 4) Final personal change
+git checkout -b change-header-blue
+# (Edit main.css to blue)
+git add .
+git commit -m "change header color to blue"
+git push -u origin change-header-blue
+
+git checkout main
+git pull
+git merge change-header-blue
+git push
+
 
